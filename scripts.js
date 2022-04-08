@@ -24,8 +24,7 @@ function start () {
             document.querySelector(".container-game").innerHTML += `<div class="card new" onclick="turn(this)"> ${playCards[i].innerHTML} </div>`;
         }
         document.querySelector(".container-timer").classList.remove("hidden");
-        idTimer = setInterval(timer, 1000);
-        timer();
+        setTimeout(idTimer = setInterval(timer, 1000), 1000);
     }
     else {
         cardNumber = prompt("Com quantas cartas você quer jogar ? (Use números pares entre 4 e 14)");
@@ -67,7 +66,7 @@ function timer () {
     time.innerHTML = `${sec} SEC`;
     if (corret==cardNumber/2) {
       clearInterval(idTimer);
-      alert(`Você ganhou em ${plays} jogadas e levou ${sec} segundos!`);
+      alert(`Você ganhou em ${plays} jogadas e levou ${sec-1} segundos!`);
       let reinicio = prompt('Gostaria de reiniciar a partida ? (responda com "sim" ou "não")');
       if (reinicio=="sim") {
        sec=0;

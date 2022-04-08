@@ -86,3 +86,20 @@ body {
     color: #75B79E;
     text-align: center;
 }
+@media (max-width: 1000px) {
+    .container-timer {
+        position: fixed;
+        top: 10px;
+        right: 5px;
+    }
+    .container-timer h2 {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 66px;
+        letter-spacing: -0.004em;
+        color: #75B79E;
+        text-align: center;
+    }
+}
